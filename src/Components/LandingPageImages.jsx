@@ -9,26 +9,32 @@ import Image3 from "../assets/Img/Image 3.png";
 import Image4 from "../assets/Img/Image 4.png";
 import SearchWithFilter from "./SearchWithFilter";
 import Imaginion from "../Layouts/Imaginion";
+import { useState } from "react";
 
 const DataImages = [Image1, Image2, Image3, Image4];
 
 const LandingPageImages = () => {
   const TitleBtn = "GÉNÉRER PLUS D’IMAGES";
+  const [activeTab, setActiveTab] = useState("Images créées");
   return (
     <div className="flex flex-col gap-[15px]">
       <HeaderPage />
       {/* section 1 : imaginons*/}
       <Imaginion />
 
-      <section className="mx-auto flex flex-col items-center gap-6 pt-6 w-full px-4">
+      <section className="mx-auto flex flex-col items-center gap-6 pt-6 w-full px-4 ">
         {/* En-tête avec les titres */}
-        <div className="flex flex-row w-full max-w-[340px] justify-between items-center">
-          <p className="text-[16px] font-bold text-Primary cursor-pointer">
-            Images créées
-          </p>
-          <p className="text-[16px] font-light cursor-pointer">
-            Suggestions Noblessa
-          </p>
+        <div className="flex flex-row w-full md:w-[340px]  justify-between items-center md:-translate-x-[430px]">
+        
+           {["Images créées", "Suggestions Noblessa"].map((tab) => (
+          <span
+            key={tab}
+            className={`text-[16px] cursor-pointer transition-colors ${activeTab === tab ? "text-Primary font-bold" : "font-light"}`}
+            onClick={() => setActiveTab(tab)}
+          >
+            {tab}
+          </span>
+        ))}
         </div>
 
         {/* Grille responsive des images */}
