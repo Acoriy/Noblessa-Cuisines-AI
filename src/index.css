@@ -1,0 +1,29 @@
+
+
+@font-face {
+    /* Helvetica Neue font */
+    font-family: 'Helvetica Neue';
+    src: url('/fonts/HelveticaNeue.woff2') format('woff2'),
+         url('/fonts/HelveticaNeue.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+    /* Bauer Bodoni font*/
+    font-family: 'Bauer Bodoni';
+    src: url('/fonts/BauerBodoni.woff2') format('woff2'),
+         url('/fonts/BauerBodoni.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+
+  
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slick-slide > div{
+     margin: 0 10px;
+}
+
