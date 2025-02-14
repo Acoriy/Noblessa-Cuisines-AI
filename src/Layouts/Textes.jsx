@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 
 const SuggestionBlock = () => {
@@ -35,12 +36,22 @@ const SuggestionBlock = () => {
 };
 
 const SuggestionsGrid = () => {
+  const [activeTab, setActiveTab] = useState("Suggestions Noblessa");
   return (
     <div className="max-w-[1200px] mx-auto mt-8 px-[40px] md:px-0">
       {/* Titre de la section */}
       <div className="flex justify-between text-[14px] font-medium mb-4 md:justify-start md:gap-[31px]">
-        <span className="cursor-pointer text-[16px] mt-4 tracking-[3%] font-light">Images créées</span>
-        <span className="text-Primary font-bold  cursor-pointer text-[16px] mt-4 tracking-[3%]">Suggestions noblessa</span>
+      {["Images créées", "Suggestions Noblessa"].map((tab) => (
+        <span
+          key={tab}
+          className={`text-[16px] cursor-pointer transition-colors ${
+            activeTab === tab ? "text-Primary font-bold" : "font-light"
+          }`}
+          onClick={() => setActiveTab(tab)} //Lorsque vous cliquez sur un onglet, il devient actif
+        >
+          {tab}
+        </span>
+      ))}
       </div>
 
       {/* Grille des suggestions */}

@@ -17,52 +17,56 @@ const LandingPageImages = () => {
   const TitleBtn = "GÉNÉRER PLUS D’IMAGES";
   const [activeTab, setActiveTab] = useState("Images créées");
   return (
-    <div className="flex flex-col gap-[15px]">
+    <div className="flex flex-col ">
       <HeaderPage />
-      {/* section 1 : imaginons*/}
-      <Imaginion />
+      {/* contenu de la page */}
+      <div className="flex flex-col gap-[15px]">
+        {/* section 1 : imaginons*/}
+        <Imaginion />
 
-      <section className="mx-auto flex flex-col items-center gap-6 pt-6 w-full px-4 ">
-        {/* En-tête avec les titres */}
-        <div className="flex flex-row w-full md:w-[340px]  justify-between items-center md:-translate-x-[430px]">
-        
-           {["Images créées", "Suggestions Noblessa"].map((tab) => (
-          <span
-            key={tab}
-            className={`text-[16px] cursor-pointer transition-colors ${activeTab === tab ? "text-Primary font-bold" : "font-light"}`}
-            onClick={() => setActiveTab(tab)}
-          >
-            {tab}
-          </span>
-        ))}
-        </div>
+        <section className="mx-auto flex flex-col items-center gap-6 pt-6 w-full px-4 ">
+          {/* En-tête avec les titres */}
+          <div className="flex flex-row w-full md:w-[340px]  justify-between items-center md:-translate-x-[430px]">
+            {["Images créées", "Suggestions Noblessa"].map((tab) => (
+              <span
+                key={tab}
+                className={`text-[16px] cursor-pointer transition-colors ${
+                  activeTab === tab ? "text-Primary font-bold" : "font-light"
+                }`}
+                onClick={() => setActiveTab(tab)}
+              >
+                {tab}
+              </span>
+            ))}
+          </div>
 
-        {/* Grille responsive des images */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 w-full max-w-[1240px] justify-center">
-          {DataImages.map((img, index) => (
-            <div
-              key={index}
-              className="w-full h-[340px] md:max-w-[305px] md:h-[305px]"
-            >
-              <img
-                src={img}
-                alt="image"
-                className="w-full h-full object-cover rounded-lg shadow-md"
-              />
-            </div>
-          ))}
-        </div>
+          {/* Grille responsive des images */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 w-full max-w-[1240px] justify-center">
+            {DataImages.map((img, index) => (
+              <div
+                key={index}
+                className="w-full h-[340px] md:max-w-[305px] md:h-[305px]"
+              >
+                <img
+                  src={img}
+                  alt="image"
+                  className="w-full h-full object-cover rounded-lg shadow-md"
+                />
+              </div>
+            ))}
+          </div>
 
-        {/* Bouton de téléchargement */}
-        <button className="bg-Primary hover:bg-HoverColor transition-transform duration-300 ease-in-out text-white text-[12px] tracking-wide font-normal rounded-full w-[140px] h-[40px]">
-          TÉLÉCHARGER
-        </button>
-      </section>
+          {/* Bouton de téléchargement */}
+          <button className="bg-Primary hover:bg-HoverColor transition-transform duration-300 ease-in-out text-white text-[12px] tracking-wide font-normal rounded-full w-[140px] h-[40px]">
+            TÉLÉCHARGER
+          </button>
+        </section>
 
-      {/* DropDown section */}
-      <SearchWithFilter TitleBtn={TitleBtn} />
-      {/* descover seaction : */}
-      <DecoverSection />
+        {/* DropDown section */}
+        <SearchWithFilter TitleBtn={TitleBtn} />
+        {/* descover seaction : */}
+        <DecoverSection />
+      </div>
     </div>
   );
 };

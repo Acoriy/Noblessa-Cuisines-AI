@@ -297,7 +297,7 @@ const Home = () => {
 
       {/* Nos Projets du moment ---------------------------- */}
 
-      <div className="flex flex-col gap-10 px-4 md:px-10 lg:px-18 py-[40px] md:h-[754px]">
+      <div className="flex flex-col gap-10 px-4 md:px-10 lg:px-18 py-[45px] md:h-[754px]">
         <h1 className="text-center text-[40px] md:text-[50px] lg:text-[50px] leading-[100%] font-light">
           Nos projets du moment
         </h1>
