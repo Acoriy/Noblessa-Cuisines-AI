@@ -17,7 +17,7 @@ const LandinPageTélechargez = () => {
         >
           <div className="flex flex-col justify-center items-center gap-5 w-full max-w-[90%] sm:max-w-[841px] h-[182px] min-h-[193px] text-white bg-[rgba(255,255,255,0.2)] backdrop-blur-sm p-6 rounded-xl">
             <h1 className="text-[32px] sm:text-[50px] font-normal font-bodoni leading-[110%] text-center">
-              Téléchargez <br /> votre visuel d’inspiration
+              Téléchargez <br /> votre visuel d&apos;inspiration
             </h1>
           </div>
         </div>
@@ -70,7 +70,7 @@ const LandinPageTélechargez = () => {
               <p className="font-light text-[10px] w-[313px] md:w-[420px] md:text-[12px] leading-[16px] md:leading-[20px] text-Textcolor">
                 En utilisant ce formulaire, vous consentez au stockage et au
                 traitement de vos données par noblessa afin de répondre à votre
-                demande de candidature. Pour plus d’information, consulter
+                demande de candidature. Pour plus d&apos;information, consulter
                 notrepolitique de confidentialité.*
               </p>
             </div>

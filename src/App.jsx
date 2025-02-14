@@ -21,7 +21,7 @@ function App() {
     }, 2000); // Temps de chargement 
   }, []);
 
-  // 🔹 Si la page charge, afficher uniquement CharginPage
+  // Si la page charge, afficher uniquement CharginPage
   if (isLoading) {
     return <CharginPage />;
   }
