@@ -77,7 +77,6 @@ const Navbar = () => {
           </button>
         </div>
         <ul className="flex flex-col gap-6 p-5">
-          <Link to="/" className="hover:text-gray-400 cursor-pointer">Home Page</Link>
           <Link to="/landingPageA" className="hover:text-gray-400 cursor-pointer">Landing page 1/A </Link>
           <Link to="/landingPageB" className="hover:text-gray-400 cursor-pointer">Landing Page 1/B</Link>
           <Link to="/landingPageImages" className="hover:text-gray-400 cursor-pointer">Landing Page Images</Link>

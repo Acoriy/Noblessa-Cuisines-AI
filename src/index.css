@@ -9,7 +9,7 @@
     font-style: normal;
 
     /* Bauer Bodoni font*/
-    font-family: 'Bauer Bodoni';
+    font-family: 'BauerBodoni';
     src: url('/fonts/BauerBodoni.woff2') format('woff2'),
          url('/fonts/BauerBodoni.woff') format('woff');
     font-weight: normal;
