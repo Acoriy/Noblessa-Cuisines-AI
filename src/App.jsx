@@ -1,5 +1,4 @@
 import {Routes , Route } from "react-router-dom"
-import Home from "./Components/Home"
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Footer from "./Components/Footer";
@@ -28,7 +27,7 @@ function App() {
   return (
     <div>
        <Routes>
-          <Route path="/" element={<Home/>}></Route>
+          {/* <Route path="/" element={<Home/>}></Route> */}
           <Route path="/landingPageA" element={<LandingPageA/>}></Route>
           <Route path="/landingPageB" element={<LandingPageB/>}></Route>
           <Route path="/landingPageImages" element={<LandingPageImages/>}></Route>
